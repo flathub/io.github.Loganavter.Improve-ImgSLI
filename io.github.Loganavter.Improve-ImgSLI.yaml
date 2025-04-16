@@ -46,5 +46,6 @@ modules:
       - install -Dm644 build/Flatpak-template/io.github.Loganavter.Improve-ImgSLI.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/Loganavter/Improve-ImgSLI/archive/refs/tags/v3.1.2.tar.gz
-        sha256: e9649dadb6b0b14ebdfd75824276b01b5f8cbaf8417e08d208f2745aa126cb6f
+        url: https://github.com/Loganavter/Improve-ImgSLI/archive/refs/tags/v3.1.5.tar.gz
+        sha256: 7664396a0e738757c05ca8187cbd3598363e1f3edcce30d79e236e568bcb62ab
+
