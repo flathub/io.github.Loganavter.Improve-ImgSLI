@@ -27,6 +27,8 @@ modules:
   - python3-modules.json
   - name: Improve-ImgSLI
     buildsystem: simple
+    build-options:
+      no-exports: true
     build-commands:
       - install -Dm755 build/Flatpak-template/improve-imgsli-launcher.sh ${FLATPAK_DEST}/bin/Improve-ImgSLI
       - install -Dm644 src/flag_icons.py -t ${FLATPAK_DEST}/lib/Improve-ImgSLI/
