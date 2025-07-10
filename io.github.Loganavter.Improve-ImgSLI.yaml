@@ -49,4 +49,4 @@ modules:
     sources:
       - type: archive
         url: https://github.com/Loganavter/Improve-ImgSLI/archive/refs/tags/v5.8.20.tar.gz 
-        sha256: b502a15481af4e0c00de66eb00ba88f49f73369b94e14d6a0cea6124ae19d55a
+        sha256: 4b77368fcaad117259c2ea12cf9b22397af94f33b8e6e91a0f7e7cbef8ee838d
