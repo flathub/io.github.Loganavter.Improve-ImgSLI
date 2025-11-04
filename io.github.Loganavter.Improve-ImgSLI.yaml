@@ -31,7 +31,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.27/OpenBLAS-0.3.27.tar.gz
-        sha256: 39591e19f345f7f32a265e31754025a14d455cb248464332159846205b38ad5e
+        sha256: aa2d68b1564fe2b13bc292672608e9cdeeeb6dc34995512e65c3b10f4599e897
   - python3-modules.json
   - name: Improve-ImgSLI
     buildsystem: simple
