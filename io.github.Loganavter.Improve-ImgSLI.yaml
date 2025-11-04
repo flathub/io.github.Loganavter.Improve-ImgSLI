@@ -4,6 +4,8 @@ runtime-version: '6.9'
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
 base-version: '6.9'
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.openblas
 command: Improve-ImgSLI
 finish-args:
   - --socket=fallback-x11
@@ -23,15 +25,6 @@ cleanup:
   - '*.la'
   - '*.a'
 modules:
-  - name: openblas
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=Release
-      - -DBUILD_SHARED_LIBS=ON
-    sources:
-      - type: archive
-        url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.27/OpenBLAS-0.3.27.tar.gz
-        sha256: aa2d68b1564fe2b13bc292672608e9cdeeeb6dc34995512e65c3b10f4599e897
   - python3-modules.json
   - name: Improve-ImgSLI
     buildsystem: simple
