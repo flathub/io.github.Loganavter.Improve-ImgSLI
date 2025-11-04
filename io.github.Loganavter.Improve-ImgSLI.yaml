@@ -48,8 +48,10 @@ modules:
       - desktop-file-edit --set-icon="${FLATPAK_ID}" build/AUR-template/improve-imgsli.desktop
       - desktop-file-edit --set-key=Exec --set-value="Improve-ImgSLI" build/AUR-template/improve-imgsli.desktop
       - install -Dm644 build/AUR-template/improve-imgsli.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
-      - install -Dm644 build/Flatpak-template/io.github.Loganavter.Improve-ImgSLI.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
+      - install -Dm644 io.github.Loganavter.Improve-ImgSLI.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/Loganavter/Improve-ImgSLI/archive/refs/tags/v7.9.1.tar.gz
-        sha256: e0d84698761e3dc04aa354e3ce4d2ac52a4556087bc8fdfa5e690457c6af4d85
+        url: https://github.com/Loganavter/Improve-ImgSLI/archive/refs/tags/v7.9.0.tar.gz
+        sha256: aed2682738c8e9e084e5fa9de35290a13b6a2f65ca980c7c5223f0869af7d16e
+      - type: file
+        path: io.github.Loganavter.Improve-ImgSLI.metainfo.xml
