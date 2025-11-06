@@ -37,8 +37,6 @@ modules:
   - python3-modules.json
   - name: Improve-ImgSLI
     buildsystem: simple
-- name: Improve-ImgSLI
-    buildsystem: simple
     build-commands:
       - install -d ${FLATPAK_DEST}/lib/Improve-ImgSLI
       - cp -r src/* ${FLATPAK_DEST}/lib/Improve-ImgSLI/
