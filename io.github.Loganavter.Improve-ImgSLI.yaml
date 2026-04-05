@@ -1,10 +1,17 @@
 app-id: io.github.Loganavter.Improve-ImgSLI
 runtime: org.kde.Platform
-runtime-version: '6.8'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: '6.8'
+base-version: '6.10'
 command: Improve-ImgSLI
+add-extensions:
+  org.freedesktop.Platform.ffmpeg-full:
+    directory: lib/ffmpeg
+    version: '24.08'
+    add-ld-path: .
+    no-autodownload: false
+
 finish-args:
   - --socket=fallback-x11
   - --socket=wayland
@@ -13,6 +20,8 @@ finish-args:
   - --filesystem=xdg-documents
   - --filesystem=xdg-download
   - --filesystem=xdg-pictures
+  - --talk-name=org.freedesktop.Notifications
+  - --env=PATH=/app/lib/ffmpeg:/app/bin:/usr/bin
 cleanup:
   - /include
   - /lib/pkgconfig
@@ -22,21 +31,33 @@ cleanup:
   - '*.la'
   - '*.a'
 modules:
+  - name: openblas
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DBUILD_SHARED_LIBS=ON
+    sources:
+      - type: archive
+        url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.32/OpenBLAS-0.3.32.tar.gz
+        sha256: f8a1138e01fddca9e4c29f9684fd570ba39dedc9ca76055e1425d5d4b1a4a766
   - python3-modules.json
   - name: Improve-ImgSLI
     buildsystem: simple
     build-commands:
+      - install -d ${FLATPAK_DEST}/lib/ffmpeg
       - install -Dm755 build/Flatpak-template/improve-imgsli-launcher.sh ${FLATPAK_DEST}/bin/Improve-ImgSLI
-      - install -d ${FLATPAK_DEST}/lib/Improve-ImgSLI/
-      - cp -a src/* ${FLATPAK_DEST}/lib/Improve-ImgSLI/
+      - install -d ${FLATPAK_DEST}/lib/Improve-ImgSLI/src
+      - cp -a src/* ${FLATPAK_DEST}/lib/Improve-ImgSLI/src/
+      - cd ${FLATPAK_DEST}/lib/Improve-ImgSLI/src && mv __main__.py .. && mv __init__.py ..
       - install -Dm644 src/resources/icons/icon.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
-      - install -Dm644 LICENSE.txt ${FLATPAK_DEST}/share/licenses/Improve-ImgSLI/LICENSE
+      - install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/Improve-ImgSLI/LICENSE
       - desktop-file-edit --set-key=Categories --set-value="Graphics;Utility;Viewer;Photography;" build/AUR-template/improve-imgsli.desktop
       - desktop-file-edit --set-icon="${FLATPAK_ID}" build/AUR-template/improve-imgsli.desktop
       - desktop-file-edit --set-key=Exec --set-value="Improve-ImgSLI" build/AUR-template/improve-imgsli.desktop
       - install -Dm644 build/AUR-template/improve-imgsli.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 build/Flatpak-template/io.github.Loganavter.Improve-ImgSLI.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
     sources:
-      - type: archive
-        url: https://github.com/Loganavter/Improve-ImgSLI/archive/refs/tags/v6.2.1.tar.gz
-        sha256: d518d1d30573ed726ac0dd556b1d59cf9e4929ca3e730bc29e375ecc7a220e39
+      - type: git
+        url: https://github.com/Loganavter/Improve-ImgSLI.git
+        tag: v8.2.0
+        commit: 14546fcee49812d4af848da5f5901ac16e0309f5
