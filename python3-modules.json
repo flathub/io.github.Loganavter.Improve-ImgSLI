@@ -6,7 +6,9 @@
         {
             "name": "python3-pybind11",
             "buildsystem": "simple",
-            "cleanup": ["*"],
+            "cleanup": [
+                "*"
+            ],
             "build-commands": [
                 "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pybind11==2.13.2\" --no-build-isolation"
             ],
@@ -15,20 +17,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/01/5e/dcb896072c0f467d68db39473f08880eb027231ea2fc5fd81ab0e7567906/pybind11-2.13.2-py3-none-any.whl",
                     "sha256": "a5376617f8475f812183ba9117ae1c9eedff6d045f2252ab76fa5c31b5a04cc4"
-                }
-            ]
-        },
-        {
-            "name": "python3-darkdetect",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"darkdetect==0.8.0\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f2/f2/728f041460f1b9739b85ee23b45fa5a505962ea11fd85bdbe2a02b021373/darkdetect-0.8.0-py3-none-any.whl",
-                    "sha256": "a7509ccf517eaad92b31c214f593dbcf138ea8a43b2935406bbd565e15527a85"
                 }
             ]
         },
@@ -50,20 +38,22 @@
             "name": "python3-pillow",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pillow==11.2.1\" --no-build-isolation"
+                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pillow==12.1.1\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/af/cb/bb5c01fcd2a69335b86c22142b2bccfc3464087efb7fd382eee5ffc7fdf7/pillow-11.2.1.tar.gz",
-                    "sha256": "a64dd61998416367b7ef979b73d3a85853ba9bec4c2925f74e588879a58716b6"
+                    "url": "https://files.pythonhosted.org/packages/1f/42/5c74462b4fd957fcd7b13b04fb3205ff8349236ea74c7c375766d6c82288/pillow-12.1.1.tar.gz",
+                    "sha256": "9ad8fa5937ab05218e2b6a4cff30295ad35afd2f83ac592e68c0d871bb0fdbc4"
                 }
             ]
         },
         {
             "name": "python3-meson-python",
             "buildsystem": "simple",
-            "cleanup": ["*"],
+            "cleanup": [
+                "*"
+            ],
             "build-commands": [
                 "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"meson-python==0.18.0\" --no-build-isolation"
             ],
@@ -105,20 +95,6 @@
             ]
         },
         {
-            "name": "python3-Wand",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"Wand==0.6.13\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/59/d5/1bdd7c9662d5e9078e25ba0eb69bdb122859295746d40ab8dfef3a7b4d42/Wand-0.6.13-py2.py3-none-any.whl",
-                    "sha256": "e5dda0ac2204a40c29ef5c4cb310770c95d3d05c37b1379e69c94ea79d7d19c0"
-                }
-            ]
-        },
-        {
             "name": "python3-PyOpenGL",
             "buildsystem": "simple",
             "build-commands": [
@@ -133,25 +109,6 @@
             ]
         },
         {
-            "name": "python3-snakeviz",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"snakeviz==2.2.2\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/cd/f7/83b00cdf4f114f10750a18b64c27dc34636d0ac990ccac98282f5c0fbb43/snakeviz-2.2.2-py3-none-any.whl",
-                    "sha256": "77e7b9c82f6152edc330040319b97612351cd9b48c706434c535c2df31d10ac5"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/09/ce/1eb500eae19f4648281bb2186927bb062d2438c2e5093d1360391afd2f90/tornado-6.5.2.tar.gz",
-                    "sha256": "ab53c8f9a0fa351e2c0741284e06c7a45da86afb544133201c5cc8578eb076a0"
-                }
-            ]
-        },
-        {
             "name": "python3-poetry-core",
             "buildsystem": "simple",
             "build-commands": [
@@ -162,40 +119,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/c7/d8/bb2f602f5e012e177e1c8560125f9770945d36622595990cf1cb794477c2/poetry_core-2.2.1-py3-none-any.whl",
                     "sha256": "bdfce710edc10bfcf9ab35041605c480829be4ab23f5bc01202cfe5db8f125ab"
-                }
-            ]
-        },
-        {
-            "name": "python3-desktop-notifier",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"desktop-notifier\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/99/37/e8730c3587a65eb5645d4aba2d27aae48e8003614d6aaf15dda67f702f1f/bidict-0.23.1-py3-none-any.whl",
-                    "sha256": "5dae8d4d79b552a71cbabc7deb25dfe8ce710b17ff41711e13010ead2abfc3e5"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/1b/f9/3952e3514244417a33643087bc5dc134aff546606d5f66f796018cb7fdfc/dbus_fast-2.44.5.tar.gz",
-                    "sha256": "e9d738e3898e2d505d7f2d5d21949bd705d7cd3d7240dda5481bb1c5fd5e3da8"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/91/36/b32a806dbb7bce308fecc977220c03ca7990831491bebc582b02619ff980/desktop_notifier-6.2.0-py3-none-any.whl",
-                    "sha256": "193b0885e694a99ae22f72234c91afbac633074295b44183bf9716dd4077b8f3"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl",
-                    "sha256": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/18/67/36e9267722cc04a6b9f15c7f3441c2363321a3ea07da7ae0c0707beb2a9c/typing_extensions-4.15.0-py3-none-any.whl",
-                    "sha256": "f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548"
                 }
             ]
         },
