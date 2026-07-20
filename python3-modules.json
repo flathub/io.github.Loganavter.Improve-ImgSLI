@@ -142,14 +142,14 @@
             "name": "python3-sli-ui-toolkit",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sli-ui-toolkit==3.1.9\" --no-build-isolation --no-deps"
+                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sli-ui-toolkit==3.1.11\" --no-build-isolation --no-deps"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://github.com/Loganavter/sli-ui-toolkit/archive/refs/tags/v3.1.9.tar.gz",
-                    "sha256": "6aeeeea56b2ec1c17341490d66f51401f48ce5ad155dde4f4525e0f60381859b",
-                    "dest-filename": "sli_ui_toolkit-3.1.9.tar.gz"
+                    "url": "https://github.com/Loganavter/sli-ui-toolkit/archive/refs/tags/v3.1.11.tar.gz",
+                    "sha256": "0b173f62b6c7b22b318c83f67af09620cc892ccaec6d71cfe6a80233f5db835e",
+                    "dest-filename": "sli_ui_toolkit-3.1.11.tar.gz"
                 }
             ]
         },
