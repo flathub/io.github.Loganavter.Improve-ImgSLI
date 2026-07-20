@@ -58,5 +58,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/Loganavter/Improve-ImgSLI.git
-        tag: v9.0.0
-        commit: e3162eb5888b317692677399aaae219878be3c73
+        tag: v10.0.0
+        commit: 4895ece0a1cb4a2e6f76e21365e9cd0e0814b0ea

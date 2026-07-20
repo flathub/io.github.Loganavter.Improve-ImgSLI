@@ -6,9 +6,6 @@
         {
             "name": "python3-pybind11",
             "buildsystem": "simple",
-            "cleanup": [
-                "*"
-            ],
             "build-commands": [
                 "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pybind11==2.13.2\" --no-build-isolation"
             ],
@@ -38,22 +35,19 @@
             "name": "python3-pillow",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pillow==12.1.1\" --no-build-isolation"
+                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pillow==11.2.1\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/1f/42/5c74462b4fd957fcd7b13b04fb3205ff8349236ea74c7c375766d6c82288/pillow-12.1.1.tar.gz",
-                    "sha256": "9ad8fa5937ab05218e2b6a4cff30295ad35afd2f83ac592e68c0d871bb0fdbc4"
+                    "url": "https://files.pythonhosted.org/packages/af/cb/bb5c01fcd2a69335b86c22142b2bccfc3464087efb7fd382eee5ffc7fdf7/pillow-11.2.1.tar.gz",
+                    "sha256": "a64dd61998416367b7ef979b73d3a85853ba9bec4c2925f74e588879a58716b6"
                 }
             ]
         },
         {
             "name": "python3-meson-python",
             "buildsystem": "simple",
-            "cleanup": [
-                "*"
-            ],
             "build-commands": [
                 "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"meson-python==0.18.0\" --no-build-isolation"
             ],
@@ -65,7 +59,7 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b0/74/73a0d5264f04c9193d2d588400ae913a167911b4342320cbdde3040b753d/meson-1.2.3-py3-none-any.whl",
+                    "url": "https://files.pythonhosted.org/packages/b0/74/73a0d5264f04c9193d2d588400ae913.1.8911b4342320cbdde3040b753d/meson-1.2.3-py3-none-any.whl",
                     "sha256": "17d9124ffad38f5bbb6b198a8de5ecc55ebcd164d35a1d9dae06b8de0605a252"
                 },
                 {
@@ -95,16 +89,44 @@
             ]
         },
         {
-            "name": "python3-PyOpenGL",
+            "name": "python3-shiboken6",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"PyOpenGL==3.1.10\" --no-build-isolation"
+                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"shiboken6==6.11.1\" --no-build-isolation --no-deps"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/de/e4/1ba6f44e491c4eece978685230dde56b14d51a0365bc1b774ddaa94d14cd/pyopengl-3.1.10-py3-none-any.whl",
-                    "sha256": "794a943daced39300879e4e47bd94525280685f42dbb5a998d336cfff151d74f"
+                    "url": "https://files.pythonhosted.org/packages/c7/9b/e0355d8897b5c150770f1d95718aad17d432fcc9c035c04f3f58427d4693/shiboken6-6.11.1-cp310-abi3-manylinux_2_34_x86_64.whl",
+                    "sha256": "9a8bccfafc8805254cabcfa1edfaf55cd52889f4998c91ad0d9a4433fb1bcdbe"
+                }
+            ]
+        },
+        {
+            "name": "python3-PySide6-Essentials",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"PySide6-Essentials==6.11.1\" --no-build-isolation --no-deps"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/5c/49/0e1237c4400bec7e335d2c4eeb49bc40d9fd88a9ac44ca9083ce1abdc308/pyside6_essentials-6.11.1-cp310-abi3-manylinux_2_34_x86_64.whl",
+                    "sha256": "e3ef7027b41e4e55fadb56e3b3257dc8ee92154b639fe67fc4c8e05e9d976c60"
+                }
+            ]
+        },
+        {
+            "name": "python3-sli-ui-toolkit",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sli-ui-toolkit==3.1.9\" --no-build-isolation --no-deps"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://github.com/Loganavter/sli-ui-toolkit/archive/refs/tags/v3.1.9.tar.gz",
+                    "sha256": "6aeeeea56b2ec1c17341490d66f51401f48ce5ad155dde4f4525e0f60381859b"
                 }
             ]
         },
@@ -175,11 +197,6 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ca/80/a561f2bf4c2da89fa631b3cbf31d120e21ea95db71fd9ec00cb0247c7a93/scipy-1.16.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
-                    "sha256": "6b65d232157a380fdd11a560e7e21cde34fdb69d65c09cb87f6cc024ee376351"
-                },
-                {
-                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/11/6b/3443abcd0707d52e48eb315e33cc669a95e29fc102229919646f5a501171/scipy-1.16.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
                     "sha256": "1d8747f7736accd39289943f7fe53a8333be7f15a82eea08e4afe47d79568c32"
                 }
@@ -199,11 +216,6 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ca/80/a561f2bf4c2da89fa631b3cbf31d120e21ea95db71fd9ec00cb0247c7a93/scipy-1.16.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
-                    "sha256": "6b65d232157a380fdd11a560e7e21cde34fdb69d65c09cb87f6cc024ee376351"
-                },
-                {
-                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/11/6b/3443abcd0707d52e48eb315e33cc669a95e29fc102229919646f5a501171/scipy-1.16.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
                     "sha256": "1d8747f7736accd39289943f7fe53a8333be7f15a82eea08e4afe47d79568c32"
                 },
@@ -211,11 +223,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/af/cb/bb5c01fcd2a69335b86c22142b2bccfc3464087efb7fd382eee5ffc7fdf7/pillow-11.2.1.tar.gz",
                     "sha256": "a64dd61998416367b7ef979b73d3a85853ba9bec4c2925f74e588879a58716b6"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/07/a9/9564250dfd65cb20404a611016db52afc6268b2b371cd19c7538ea47580f/scikit_image-0.26.0-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl",
-                    "sha256": "915bb3ba66455cf8adac00dc8fdf18a4cd29656aec7ddd38cb4dda90289a6f21"
                 },
                 {
                     "type": "file",
@@ -260,11 +267,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/b5/f4/098d2270d52b41f1bd7db9fc288aaa0400cb48c2a3e2af6fa365d9720947/numpy-2.3.4.tar.gz",
                     "sha256": "a7d018bfedb375a8d979ac758b120ba846a7fe764911a64465fd87b8729f4a6a"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/45/fa/f67c4e644fdf06503e120f9d1c8d8654b99066dea7093a674b67704fa4a4/imagecodecs-2026.3.6-cp311-abi3-manylinux_2_28_aarch64.whl",
-                    "sha256": "30fa140bb1a112a889926af36977214ed52a22e4557356043259b5e2f79cfba5"
                 },
                 {
                     "type": "file",
