@@ -46,7 +46,6 @@ modules:
       - install -Dm755 build/Flatpak-template/improve-imgsli-launcher.sh ${FLATPAK_DEST}/bin/Improve-ImgSLI
       - install -d ${FLATPAK_DEST}/lib/Improve-ImgSLI/src
       - cp -a src/* ${FLATPAK_DEST}/lib/Improve-ImgSLI/src/
-      - cp -a packages/sli-ui-toolkit/src/sli_ui_toolkit ${FLATPAK_DEST}/lib/Improve-ImgSLI/src/
       - cd ${FLATPAK_DEST}/lib/Improve-ImgSLI/src && mv __main__.py .. && mv __init__.py ..
       - install -Dm644 src/resources/icons/icon.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
       - install -Dm644 LICENSE ${FLATPAK_DEST}/share/licenses/Improve-ImgSLI/LICENSE
@@ -58,5 +57,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/Loganavter/Improve-ImgSLI.git
-        tag: v9.0.0
-        commit: e3162eb5888b317692677399aaae219878be3c73
+        tag: v10.0.1
+        commit: a040ced9fe6a8f943111095ff549afd253b744b1
