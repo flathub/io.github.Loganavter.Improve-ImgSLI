@@ -148,7 +148,8 @@
                 {
                     "type": "file",
                     "url": "https://github.com/Loganavter/sli-ui-toolkit/archive/refs/tags/v3.1.9.tar.gz",
-                    "sha256": "6aeeeea56b2ec1c17341490d66f51401f48ce5ad155dde4f4525e0f60381859b"
+                    "sha256": "6aeeeea56b2ec1c17341490d66f51401f48ce5ad155dde4f4525e0f60381859b",
+                    "dest-filename": "sli_ui_toolkit-3.1.9.tar.gz"
                 }
             ]
         },
